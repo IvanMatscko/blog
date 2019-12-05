@@ -1,0 +1,10 @@
+a {
+  padding: 5px
+}
+.breadcrumb .active {
+  position: relative;
+  padding-left: 0;
+}
+.breadcrumb .active::before {
+  content: "/"
+}
