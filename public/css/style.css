@@ -8,3 +8,16 @@ a {
 .breadcrumb .active::before {
   content: "/"
 }
+table {
+    border-collapse: collapse;
+    width: 100%;
+    border-top: 1px solid #000;
+    background: #fff;
+}
+.btn.btn-primery {
+  margin-bottom: 15px;
+  border: 1px solid #C6BCBC;
+}
+.btn.btn-primery:hover {
+  background: #D2B0B0;
+}

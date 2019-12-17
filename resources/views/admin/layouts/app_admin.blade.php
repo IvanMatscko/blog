@@ -11,7 +11,6 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
@@ -41,8 +40,8 @@
                             Блог
                           </a>
                           <ul class="dropdown-menu" role="menu">
-                            <li> <a href="#">категории</a> </li>
-                            <li> <a href="#">материалы</a> </li>
+                            <li> <a href="{{route('admin.category.index')}}">категории</a> </li>
+                            <li> <a href="{{route('admin.article.index')}}">материалы</a> </li>
                           </ul>
                         </li>
                     </ul>
@@ -85,5 +84,8 @@
             @yield('content')
         </main>
     </div>
+
+    <script src="{{ asset('/vendor/unisharp/laravel-ckeditor/ckeditor.js')}}"></script>
+    <script src="{{ asset('js/app.js')}}"></script>
 </body>
 </html>
