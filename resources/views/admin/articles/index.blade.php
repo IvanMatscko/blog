@@ -26,8 +26,8 @@
           <form onsubmit="if(confirm(Удалить?)){ return true }else{ return false }" action="{{route('admin.article.destroy', $article)}}" method="post">
             <input type="hidden" name="_method" value="DELETE">
             {{ csrf_field() }}
-            <a href="{{route('admin.article.edit', $article)}}"><i class="fa fa-edit"></i></a>
-            <button type="submit" class="btn"> <i class="fa fa-trash-o"></i> </button>
+            <a class="button_link" href="{{route('admin.article.edit', $article)}}"><i class="fa fa-edit"></i></a>
+            <button type="submit" class="btn btn_delete"> <i class="fa fa-trash-o"></i> </button>
           </form>
         </td>
       </tr>
@@ -37,15 +37,11 @@
       </tr>
       @endforelse
     </tbody>
-    <tfoot>
-      <tr>
-        <td colspan="3">
-          <ul class="pagination pull-right">
-            {{$articles->links()}}
-          </ul>
-        </td>
-      </tr>
-    </tfoot>
   </table>
+  <div class="">
+    <ul class="pagination pull-right">
+      {{$articles->links()}}
+    </ul>
+  </div>
 </div>
 @endsection

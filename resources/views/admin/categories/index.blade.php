@@ -37,15 +37,10 @@
       </tr>
       @endforelse
     </tbody>
-    <tfoot>
-      <tr>
-        <td colspan="3">
-          <ul class="pagination pull-right">
-            {{$categories->links()}}
-          </ul>
-        </td>
-      </tr>
-    </tfoot>
-  </table>
+    <div class="">
+      <ul class="pagination pull-right">
+        {{$categories->links()}}
+      </ul>
+    </div>
 </div>
 @endsection
