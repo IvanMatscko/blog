@@ -162,6 +162,8 @@ return [
 
         //Ckeditor
         Unisharp\Ckeditor\ServiceProvider::class,
+        //own providers
+        App\Providers\BlogServiceProvider::class,
 
     ],
 

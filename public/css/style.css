@@ -92,3 +92,6 @@ table {
 .list-group-item-text {
   color: #1A9244;
 }
+.dropdown:hover > .dropdown-menu {
+            display: block;
+        }
