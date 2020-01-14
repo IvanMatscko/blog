@@ -8,7 +8,9 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>@yield('title')</title>
+    <meta name="keywords" content="@yield('mata_keywords')">
+    <meta name="description" content="@yield('mata_description')">
 
 
 
@@ -26,7 +28,9 @@
         <main class="py-4">
             @yield('content')
         </main>
+
     </div>
+
    <!-- Scripts -->
     <script src="{{ asset('js/app.js')}}"></script>
 </body>
