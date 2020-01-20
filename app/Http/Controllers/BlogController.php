@@ -33,4 +33,18 @@ class BlogController extends Controller
       ]);
 
     }
+
+    public function getJson()
+    {
+      return [
+        array(
+          'title' => 'title',
+          'url' => 'http://dka-develop.ru'
+        ),
+        array(
+          'title' => 'youtube',
+          'url' => 'http://youtube'
+        )
+      ];
+    }
 }
