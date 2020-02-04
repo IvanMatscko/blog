@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Category;
 use App\Article;
+use App\Table;
 use Illuminate\Http\Request;
 
 class BlogController extends Controller
@@ -12,6 +13,13 @@ class BlogController extends Controller
       return view('blog.category', [
         'category' => $category,
         'articles' => $category->articles()->where('published', 1)->paginate(12)
+      ]);
+    }
+    public function table($slug) {
+      $table = Table::where('slug', $slug)->first();
+      return view('blog.table', [
+        'table' => $table,
+        'articles' => $table->articles()->where('published', 1)->paginate(12)
       ]);
     }
     public function article($slug) {
@@ -45,6 +53,17 @@ class BlogController extends Controller
           'title' => 'youtube',
           'url' => 'http://youtube'
         )
+      ];
+    }
+    public function chartData()
+    {
+      return [
+        'labels' => ['март','фпрель','май','июнь'],
+        'datasets' => array([
+          'label' => 'Продажи',
+          'backgroundColor' => '#F26202',
+          'data' => [15000,5000,10000,30000],
+        ])
       ];
     }
 }

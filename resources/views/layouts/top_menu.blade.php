@@ -8,6 +8,7 @@
       <ul class="dropdown-menu" role="menu">
         @include('layouts.top_menu', ['categories' => $category->children])
       </ul>
+    </li>
   @else
     <li>
       <a href="{{url("/blog/category/$category->slug")}}">{{$category->title}}</a>

@@ -47,8 +47,21 @@
           </a>
         @endforeach
       </div>
+
+      <div class="col-sm-6">
+        <a href="{{route('admin.table.create')}}" class="btn btn-block btn-default">Создать таблицу</a>
+        @foreach ($tables as $table)
+          <a href="{{route('admin.table.edit', $table)}}" class="list-group-item">
+            <h4 class="list-group-list-heading">{{$table->title}}</h4>
+            <p class="list-group-item-text">
+              {{$table->count()}}
+            </p>
+          </a>
+        @endforeach
+      </div>
+
     </div>
-  
+
   </div>
 
 

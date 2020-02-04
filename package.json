@@ -18,5 +18,10 @@
         "laravel-mix": "^2.0",
         "lodash": "^4.17.4",
         "vue": "^2.5.7"
+    },
+    "dependencies": {
+        "chart.js": "^2.9.3",
+        "owl.carousel": "^2.3.4",
+        "vue-chartjs": "^3.5.0"
     }
 }

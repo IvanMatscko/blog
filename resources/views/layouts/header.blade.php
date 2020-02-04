@@ -12,7 +12,9 @@
             <ul class="navbar-nav mr-auto">
               @include('layouts.top_menu')
             </ul>
-
+            <ul class="navbar-nav mr-auto">
+              @include('layouts.top_menu_table')
+            </ul>
             <!-- Right Side Of Navbar -->
             <ul class="navbar-nav ml-auto">
                 <!-- Authentication Links -->

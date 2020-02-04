@@ -15,5 +15,6 @@
 <example-component></example-component>
 <prop-component :urldata ="{{json_encode($url_data)}}"></prop-component>
 <ajax-component></ajax-component>
+<chartline-component></chartline-component>
 
 @endsection
